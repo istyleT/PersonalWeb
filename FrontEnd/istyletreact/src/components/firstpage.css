@@ -1,0 +1,16 @@
+.main-firstpage {
+   color: aliceblue;
+   background-color: transparent;
+   width: 100vw;
+   height: 95vh;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+.profile-pic img {
+     width: 600px;
+     height: 600px;
+}
+.profile-content {
+     font-size: 2.0em;
+}
