@@ -1,15 +1,27 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import NavnarMain from './components/navbarmain';
-import FirstPage from './components/firstpage';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import Home from './pages';
+import Applications from './pages/applications';
+import Contact from './pages/contact';
+import Knowledge from './pages/knowledge';
+import Pagenotfound from './pages/pagenotfound';
 
 function App() {
   return (
-    <div className="App">
-         <NavnarMain />
-         <FirstPage />
-    </div>
+    <Router>
+    <Navbar />
+    <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/applications' element={<Applications/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/knowledge' element={<Knowledge/>} />
+        <Route path='*' element={<Pagenotfound/>} />
+    </Routes>
+    </Router>
   );
 }
 

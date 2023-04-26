@@ -1,0 +1,14 @@
+.main-Block-app {
+              width: 80%;
+              margin-left:10% ;
+              border-radius: 40px;
+              transition: 0.3s;
+              cursor: pointer;
+}
+.main-Block-app:hover {
+              box-shadow: 0px 0px 15px 10px rgba(232, 54, 54, 0.8);
+              scale: 1.03;                 
+}
+.container img {
+                    box-shadow: 5px 10px 5px 5px rgba(54, 54, 54, 0.8);    
+}

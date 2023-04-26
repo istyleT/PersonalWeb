@@ -1,0 +1,24 @@
+.main-firstpage {
+   color: aliceblue;
+   width: 100vw;
+   height: 95vh;
+   background-color: rgba(0, 0, 0, 1);
+}
+.profile-pic img {
+     width: 500px;
+     height: 500px;
+}
+.profile-content {
+     font-size: 1.8em;
+}
+.profile-link {
+     background-color: rgb(180, 11, 11);
+     transition: all 0.1s;
+     border : none;
+}
+.profile-link:hover {
+     background-color: rgb(180, 11, 11);
+     outline-offset: 4px;
+     outline: 4px solid rgb(180, 11, 11);
+     scale: 1.03;
+}
