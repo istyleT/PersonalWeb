@@ -8,11 +8,11 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   padding: 0.3rem calc((100vw - 1000px) / 2);
-  z-index: 12;
+  z-index: 9999;
 `;
   
 export const NavLink = styled(Link)`
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .4);
   font-size: 1.3rem;
   font-weight: 700;
   background-color: transparent
@@ -23,7 +23,7 @@ export const NavLink = styled(Link)`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &.hover {
-    color: #fff;
+    color: red;
   }
   &.active {
     color: #fff;
@@ -36,7 +36,6 @@ export const NavMenu = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   // margin-right: -24px;
   /* Second Nav */
   /* margin-right: 24px; */

@@ -9,13 +9,13 @@ const Navbar = () => {
       <Nav>
         <NavMenu>
           <NavLink to="/">
-          I-styleT
-          </NavLink>
-          <NavLink to="/applications">
-          Applications
+          Home
           </NavLink>
           <NavLink to="/knowledge">
-          Knowledge
+          Learn
+          </NavLink>
+          <NavLink to="/applications">
+          Apps
           </NavLink>
           <NavLink to="/contact">
           Contact

@@ -1,0 +1,9 @@
+.layout-sub-knowledge {
+                    max-width: 1100px;
+                    padding: 50px;
+                    margin-left: 380px;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr 1fr ;
+                    row-gap: 40px;
+                    column-gap: 20px;
+}

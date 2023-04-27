@@ -8,17 +8,21 @@
      width: 500px;
      height: 500px;
 }
+.profile-head {
+     font-size: 3.2em;
+}
 .profile-content {
-     font-size: 1.8em;
+     font-size: 1.6em;
 }
 .profile-link {
-     background-color: rgb(180, 11, 11);
+     font-size: 1.4em;
+     background-color: Indigo;
      transition: all 0.1s;
      border : none;
 }
 .profile-link:hover {
-     background-color: rgb(180, 11, 11);
+     background-color: Indigo;
      outline-offset: 4px;
-     outline: 4px solid rgb(180, 11, 11);
+     outline: 4px solid Indigo;
      scale: 1.03;
 }

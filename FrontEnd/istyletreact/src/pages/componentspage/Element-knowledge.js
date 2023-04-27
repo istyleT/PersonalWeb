@@ -1,15 +1,13 @@
 import React from "react";
 import './Element-knowledge.css';
 const ElementKnowledge = (props) => {
-                    const {title, description, thumbnailUrl} = props;
+                    const {title, thumbnailUrl, alt, linkurl} = props;
                     return(
-                       <div className="main-element-knowledge d-flex justify-content-center text-light p-3 bg-dark">
-                          <img src={thumbnailUrl} className="bd-placeholder-img flex-shrink-0 me-2 rounded" width="48px" height="48px"  preserveAspectRatio="xMidYMid slice" focusable="false"/>
-                          <p className="pb-3 mb-0 small lh-sm border-bottom">
-                            <strong className="float-start d-block text-gray-dark">{title}</strong>
-                            {description}
-                          </p>
-                        </div>
+                                        <div class="main-element-knowledge col-lg-6 bg-dark card rounded-circle p-2">
+                                         <img src={thumbnailUrl}  alt={alt} className="bd-placeholder-img flex-shrink-0 rounded" width="60px" height="60px" focusable="false"/>
+                                            <h4 className="text-light fw-bold mb-3">{title}</h4>
+                                            <p><a class="btn rounded-pill fw-bold" target="_blank" href={linkurl}>Details »</a></p>
+                                        </div>
                     );
 }
 export default ElementKnowledge;
