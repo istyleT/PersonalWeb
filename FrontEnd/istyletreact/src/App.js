@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route}
+import { BrowserRouter, Routes, Route, redirect}
     from 'react-router-dom';
 import Home from './pages';
 import Applications from './pages/applications';
@@ -24,7 +24,7 @@ function App() {
         <Route path='/applications' element={<Applications/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/knowledge' element={<Knowledgelayout/>}>
-                <Route path='cheatsheet' element={<Subknowsheet/>} />
+                <Route path='' element={<Subknowsheet/>} />
                 <Route path='mainconcept' element={<Subknowconcept/>} />
                 <Route path='frontend' element={<Subknowfront/>} />
                 <Route path='backend' element={<Subknowback/>} />

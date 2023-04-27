@@ -1,9 +1,9 @@
 import React from "react";
 import ElementKnowledge from "../componentspage/Element-knowledge";
-import knowledgedatas from "../data/knowledgedatas";
+import frontknowledgedatas from "../data/frontknowledgedatas";
 import './subknowledge.css';
 const Subknowfront = () => {
-                    const knowledgeList = knowledgedatas.map((knowledgedata, index) => {
+                    const knowledgeList = frontknowledgedatas.map((knowledgedata, index) => {
                                         return (
                                           <ElementKnowledge
                                               key={index}

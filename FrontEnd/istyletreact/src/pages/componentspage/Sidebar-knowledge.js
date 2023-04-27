@@ -4,13 +4,13 @@ import './Sidebar-knowledge.css';
 const SidebarKnowledge = () => {
                     return (
 <nav className="aside-knowledge d-flex flex-column flex-shrink-0 py-2 px-1 bg-dark">
-    <div className="aside-topic-knowledge px-1 py-2 d-flex justify-content-center align-items-center">
+    <div className="border-bottom border-danger border-4 px-1 py-2 d-flex justify-content-center align-items-center">
       <span className="fs-2 fw-bold font-monospace">Knowlegde</span>
     </div>
 
     <ul className="nav nav-pills flex-column mt-3 mb-auto " >
       <li className="nav-item">
-        <Link to="/knowledge/cheatsheet" className="nav-link link-light fw-bold fs-5 font-monospace" >
+        <Link to="/knowledge/" className="nav-link link-light fw-bold fs-5 font-monospace" aria-current="page">
           <img src="../images/icons8-stack-of-paper-64.png" alt="icon-sheet" width="40px" height="40px"/>
           Cheat Sheet
         </Link>
