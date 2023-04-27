@@ -1,14 +1,39 @@
 .main-Block-app {
-              width: 80%;
-              margin-left:10% ;
+              width: 70%;
+              margin-left:15% ;
               border-radius: 40px;
               transition: 0.3s;
+              box-shadow: 0px 0px 15px 10px crimson;
               cursor: pointer;
 }
 .main-Block-app:hover {
-              box-shadow: 0px 0px 15px 10px rgba(232, 54, 54, 0.8);
-              scale: 1.03;                 
+              scale: 1.03;    
+              box-shadow: 0px 0px 15px 10px indigo;
 }
 .container img {
-                    box-shadow: 5px 10px 5px 5px rgba(54, 54, 54, 0.8);    
+                    margin-top: 15px;
+                    box-shadow : none;
+                    transition: 0.3s;
+}
+.container img:hover {
+                    box-shadow: 0px 0px 15px 5px indigo;       
+}
+.topic-app {
+                    color: aliceblue;
+                    padding: 5px;
+}
+.link-app {
+                    outline-offset: 3px;
+                    outline: 3px solid crimson;
+                    width: 140px;
+                    margin-right: 20px;
+                    transition: 0.1s;
+                    border-color: crimson;
+}
+.link-app:hover {
+                    outline-offset: 4.5px;
+                    outline: 4.5px solid darkorchid;
+                    background-color: darkorchid;
+                    border-color: darkorchid;
+
 }

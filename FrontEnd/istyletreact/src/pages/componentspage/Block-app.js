@@ -3,13 +3,13 @@ import './Block-app.css'
 const BlockApp = (props) => {
                     const { title, description, thumbnailUrl } = props;
                     return (
-  <div className="main-Block-app px-4 pt-5 mt-5 text-center  bg-dark text-light ">
-    <h1 className="display-4 fw-bold">{title}</h1>
+  <div className="main-Block-app px-1 pt-1 mt-5 text-center bg-dark text-light ">
+    <h1 className="topic-app display-4 fw-bold">{title}</h1>
     <div className="col-lg-6 mx-auto">
-      <p className="lead mb-4">{description}</p>
-      <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" className="btn btn-outline-danger btn-lg px-4 me-sm-3">Visit</button>
-        <button type="button" className="btn btn-outline-danger btn-lg px-4">Source Code</button>
+      <p className="mb-3 font-monospace">{description}</p>
+      <div className="d-grid gap-2 d-sm-flex justify-content-sm-center mb-3">
+        <button type="button" className="link-app btn btn-danger btn-lg px-4 rounded-pill fw-bold fs-4">Visit</button>
+        <button type="button" className="link-app btn btn-danger btn-lg px-4 rounded-pill fw-bold fs-4">Code</button>
       </div>
     </div>
     <div className="overflow-hidden">
