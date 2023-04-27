@@ -1,5 +1,5 @@
 import React from "react";
-import './firstpage.css'
+import './home.css';
 const Home = () => {
                     return (
                               <main className="main-firstpage d-flex justify-content-around align-items-center p-3">
@@ -11,8 +11,8 @@ const Home = () => {
                                          </p>
                                        </div>
                                        <div className="d-flex flex-column justify-content-around align-items-center">
-                                           <a className="profile-link p-3 w-50 profile-content btn font-monospace rounded-pill mb-3 fw-bold">View Profile</a>
-                                           <a className="profile-link p-3 w-50 profile-content btn font-monospace rounded-pill mt-3 fw-bold">Let's Talk</a>           
+                                           <a  className="profile-link p-3 w-50 btn font-monospace rounded-pill mt-3 fw-bold">View Profile</a>
+                                           <a className="profile-link p-3 w-50 btn font-monospace rounded-pill mt-3 fw-bold">Let's Talk</a>           
                                        </div>
                                     </div>
                                     <div className="profile-pic w-50 px-1 ms-5">

@@ -16,6 +16,7 @@
 }
 .profile-link {
      font-size: 1.4em;
+     color: aliceblue;
      background-color: Indigo;
      transition: all 0.1s;
      border : none;
