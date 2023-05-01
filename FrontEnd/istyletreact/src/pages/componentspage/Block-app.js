@@ -3,7 +3,7 @@ import './Block-app.css'
 const BlockApp = (props) => {
                     const { title, description, thumbnailUrl } = props;
                     return (
-  <div className="main-Block-app px-1 pt-1 mt-5 text-center bg-dark text-light ">
+  <div className="main-Block-app px-1 pt-1 mt-4 mb-5 text-center bg-dark text-light ">
     <h1 className="topic-app display-4 fw-bold">{title}</h1>
     <div className="col-lg-6 mx-auto">
       <p className="mb-3 font-monospace">{description}</p>

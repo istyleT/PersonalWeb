@@ -7,14 +7,17 @@
                     border: 2px solid white;
                     outline-offset: 4px;
                     outline: 4px solid darkorchid;
+                    transition: 0.3s;
+}
+.main-element-knowledge:hover {
+                    scale: 1.1;
 }
 .btn-knowledge {
                     background-color: rgb(223, 72, 72); 
                     color: aliceblue;
                     transition: all ease-in 0.2s;
 }
-.btn-knowledge:hover, active {
+.btn-knowledge:hover{
                     background-color: rgb(152, 74, 207);
                     color: aliceblue;
-                    scale: 1.15;
 }

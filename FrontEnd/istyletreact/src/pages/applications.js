@@ -14,7 +14,7 @@ const Applications = () => {
                          );
                     });
                     return (
-                       <main className="main-applications">
+                       <main className="main-applications p-1">
                           {appList}
                        </main>
                     );

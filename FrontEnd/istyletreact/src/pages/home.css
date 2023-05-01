@@ -21,7 +21,7 @@
      transition: all 0.1s;
      border : none;
 }
-.profile-link:hover {
+.profile-link:hover  {
      background-color: Indigo;
      outline-offset: 4px;
      outline: 4px solid Indigo;
