@@ -18,7 +18,7 @@ const Navbar = () => {
           Apps
           </NavLink>
           <NavLink to="/contact">
-          Contact
+          Community
           </NavLink>
         </NavMenu>
       </Nav>

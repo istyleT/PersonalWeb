@@ -1,0 +1,10 @@
+.aside-community {
+                    width: 25%;
+                    height: 100%;
+                    color: aliceblue;
+                    overflow-y: scroll;
+}
+
+.nav-link img {
+                    margin-right: 25px;
+}

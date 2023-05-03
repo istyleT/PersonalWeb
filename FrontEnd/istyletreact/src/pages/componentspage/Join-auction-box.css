@@ -1,0 +1,8 @@
+.main-join-box {
+                    opacity: 0.80;
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    width: 260px;
+                    height: 260px;    
+}

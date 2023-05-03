@@ -1,3 +1,22 @@
-.main-formcontact {
-                    padding: 20px;
+.main-form-post {
+                    width: 100%;
 }
+.main-formcontact {
+                    padding: 15px;
+                    background-color: rgb(125, 163, 196);
+}
+.edit-formcontact {
+                    position: absolute;
+                    padding: 20px;
+                    top: 80;
+                    left: 50%;
+
+}
+.label-text-post {
+                    color: blueviolet;
+}
+
+.main-message-element {
+                    background-color: DarkSlateBlue;
+}
+

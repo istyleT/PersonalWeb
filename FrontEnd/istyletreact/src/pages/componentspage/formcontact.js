@@ -7,7 +7,7 @@ const FormContact = () => {
     const [message, setmessage] = React.useState(startmessage);
     const [editmessage, seteditmessage] = React.useState(null);
     const [messageall, setmessageall] = React.useState([]); 
-    // Functions
+    // Functions Form Input
     function onValueChange(event) {
         const {name, value} = event.target;
         setmessage((preMessage) => {
@@ -17,6 +17,17 @@ const FormContact = () => {
             };
         });
     };
+    function onEditValueChange(event) {
+        const {name, value} = event.target;
+        seteditmessage((preMessage) => {
+            return {
+                ...preMessage,
+                [name]: value
+            };
+        });
+    };
+
+    // Functions Add Edit Delete
     function onSubmitnote(event) {
         event.preventDefault();
 
@@ -34,46 +45,73 @@ const FormContact = () => {
             });
         }
     )};
-    //  UI components
+    function onEditSubmit(event) {
+        event.preventDefault();
+        setmessageall((preMessageall) => {
+            return preMessageall.map((message) => {
+                if (message.id === editmessage.id) {
+                    return editmessage;
+                }
+                return message;
+            });
+        });
+        seteditmessage(null);
+    };
+    //  UI components message
     const messageElement = messageall.map((message) => {
-             return (
-                <div key={message.id} className="container bg-light">
-                    <h5 className="text-danger">Name : {message.sender}</h5>
-                    <h5 className="text-danger">Text : {message.inbox}</h5>
-                    <p><a className="fw-bold" href="#" onClick={() => {seteditmessage(message.id)}}>Edit</a></p>
-                    <p> | </p>
-                    <p><a className="fw-bold" href="#" onClick={() => {deleteMessage(message.id)}}>Delet</a></p>
+             return ( 
+                <div key={message.id} className="main-message-element p-3 rounded-3 d-flex justify-content-center align-items-center mt-2 fixed-bottom">
+                   <div className="float-end">
+                    <h6 className="text-light d-flex">Poster : <p> {message.sender}</p></h6>
+                    <h6 className="text-light d-flex">Message : <p>{message.inbox}</p></h6>
+                   </div>
+                   <div className="float-end">
+                    <button className="d-block btn btn-warning fw-bold m-1" href="#" onClick={() => {seteditmessage(message)}}>Edit Post</button>
+                    <button className="d-block btn btn-danger fw-bold m-1" href="#" onClick={() => {deleteMessage(message.id)}}>Delete Post</button>
+                   </div>
                 </div>
              );
     });
-    const editmessageElement = messageall.filter((message) => {})
+    let editmessageElement = null;
+    if (!!editmessage) {
+        editmessageElement = (
+            <form  className="edit-formcontact d-flex flex-column align-items-center bg-dark w-80" onSubmit={onEditSubmit}>
+            <div className="input-data d-flex flex-column py-3">
+                <h5 className="fw-bold text-light">เเก้ไขข้อความ</h5>
+                <label className="text-light fw-bold" htmlFor="name-sender">Poster</label>
+                <input type="text" value={editmessage.sender} name="sender" onChange={onEditValueChange}/>
+                <label className="text-light fw-bold" htmlFor="text-message">Message</label>
+                <input type="text" value={editmessage.inbox} name="inbox"  onChange={onEditValueChange}/>
 
+            </div>
+            <div>
+                <button type="submit" className="btn btn-success">Submit</button>
+            </div>
+        </form>
+        );
+    }
 
                     return (
-                        <div className="container bg-secondary">
-                             <form onSubmit={onSubmitnote} className="main-formcontact d-flex flex-column align-items-center bg-dark w-80" >
-                                            <div className="input-data d-flex flex-column py-3">
-                                                <h5 className="fw-bold text-light">ระบบฝากข้อความ</h5>
-                                                <label className="text-light fw-bold" htmlFor="name-sender">Name :</label>
-                                                <input type="text" value={message.sender} name="sender" onChange={onValueChange}/>
-                                                <label className="text-light fw-bold" htmlFor="text-message">Text :</label>
-                                                <input type="text" value={message.inbox} name="inbox" onChange={onValueChange}/>
-                                                {/* <label className="text-light fw-bold" for="contact-sender">Tel :</label> */}
-                                                {/* <input type="number"/> */}
-                                                {/* <label className="text-light fw-bold" for="test">test</label> */}
-                                                {/* <input type="range"/> */}
-                                                {/* <label className="text-light fw-bold" for="test">test</label> */}
-                                                {/* <input type="color"/> */}
+                        <div className="main-form-post ms-1">
+                            <form onSubmit={onSubmitnote} className="main-formcontact d-flex flex-column align-items-center rounded-3 bg-dark" >
+                                <div className="offer-box d-flex flex-column py-3">
+                                    <h5 className="fw-bold text-light mb-2 py-2 border-3 border-bottom border-danger text-center">Join Auction.</h5>
+                                    <label className="label-text-post fw-bold mb-1 font-monospace" htmlFor="name-sender">Price</label>
+                                    <input className="mb-3 rounded-pill text-center" type="text" value={message.sender} name="sender" onChange={onValueChange}/>
+                                    <label className="label-text-post fw-bold mb-1 font-monospace" htmlFor="text-message">Message</label>
+                                    <textarea className="mb-2 rounded-3 p-2"  cols="20" rows="2" type="text" value={message.inbox} name="inbox" onChange={onValueChange}/>
+                                </div>
+                                <div>
+                                    <button type="submit" className="btn btn-danger fw-bold rounded-pill">Offer</button>
+                                </div>
+                            </form>
+                             <div className="mt-3">
+                             {messageElement}
+                             </div>
+                                            <div className="bg-primary text-light">
+                                             {editmessageElement}
                                             </div>
-                                            <div>
-                                                <button type="submit" className="btn btn-success">Submit</button>
-                                                {/* <button className="btn btn-warning">Reset</button> */}
-                                                {/* <button className="btn btn-danger">Cancel</button> */}
-                                            </div>
-                                        </form>
-                                            <div className="container bg-warning text-danger">
-                                            {messageElement}
-                                            </div>
+                                            
                         </div>
                                        
                     );
