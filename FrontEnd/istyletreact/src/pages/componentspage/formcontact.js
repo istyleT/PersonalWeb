@@ -1,6 +1,5 @@
 import React from "react";
 import './Formcontact.css'
-// set start value
 const startmessage = {sender: "", inbox: ""};
 const FormContact = () => {
     // States
@@ -92,19 +91,15 @@ const FormContact = () => {
     }
 
                     return (
-                        <div className="main-form-post ms-1">
-                            <form onSubmit={onSubmitnote} className="main-formcontact d-flex flex-column align-items-center rounded-3 bg-dark" >
+                        <div className="main-auction-display ms-1 bg-transparent">
+                            <div className="main-formcontact d-flex flex-column align-items-center rounded-3 bg-dark" >
                                 <div className="offer-box d-flex flex-column py-3">
-                                    <h5 className="fw-bold text-light mb-2 py-2 border-3 border-bottom border-danger text-center">Join Auction.</h5>
-                                    <label className="label-text-post fw-bold mb-1 font-monospace" htmlFor="name-sender">Price</label>
-                                    <input className="mb-3 rounded-pill text-center" type="text" value={message.sender} name="sender" onChange={onValueChange}/>
-                                    <label className="label-text-post fw-bold mb-1 font-monospace" htmlFor="text-message">Message</label>
-                                    <textarea className="mb-2 rounded-3 p-2"  cols="20" rows="2" type="text" value={message.inbox} name="inbox" onChange={onValueChange}/>
+                                    
                                 </div>
                                 <div>
                                     <button type="submit" className="btn btn-danger fw-bold rounded-pill">Offer</button>
                                 </div>
-                            </form>
+                            </div>
                              <div className="mt-3">
                              {messageElement}
                              </div>
